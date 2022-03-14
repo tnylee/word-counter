@@ -8,14 +8,14 @@ for (const word of words) {
 
     if (word.length > 3) {
         for (const m of messages) {
-            if (m.message.includes('อยู่ไหน')) {
+            if (m.message.includes(word)) {
                 count += 1
             }
         }
     
         if (count > 0) {
             commons.push({
-                word: 'อยู่ไหน',
+                word,
                 count
             })
         }
